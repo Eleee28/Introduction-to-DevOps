@@ -73,9 +73,19 @@ Assuming Flask installed successfully, we can run the app by:
 flask --app hello run --host=0.0.0.0
 ~~~
 
-![flask running](1-1.png) Flask running on the VM
+<figure>
+  <img src="1-1.png" alt="Flask running"/>
+  <figcaption>Flask running on the VM</figcaption>
+</figure>
 
-![flask receiving requests](1-2.png) Flask receiving requests on the VM
+&nbsp;
+
+<figure>
+  <img src="1-2.png" alt="Flask receiving requests"/>
+  <figcaption>Flask receiving requests on the VM</figcaption>
+</figure>
+
+&nbsp;
 
 You should be able to open another terminal/command prompt window, run ``vagrant ssh`` again to log into the VM again, and run ``curl -O http://localhost:5000`` to download the HTML file and prove that the app works. The aoutput should be stored in a file called *curl_response*.
 
@@ -107,4 +117,7 @@ Make a change to the app so that it serves two pages: one for the / route and an
 For **/about**, it should display a message saying "This is a Flask web app running in a Linux VM".
 Modify the / route to include a link to this page.
 
-![browser visual](2-1.png) Brower viewing the web page
+<figure>
+  <img src="2-1.png" alt="Browser visual"/>
+  <figcaption>Browser viewing the web page</figcaption>
+</figure>
