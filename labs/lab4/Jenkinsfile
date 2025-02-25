@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone the git repo') {
+            steps {
+                git 'https://github.com/git/git'
+            }
+        }
+
+        stage('Prepare the build') {
+            steps {
+                sh 'make configure'
+                sh './configure --prefix=/home/vagrant/git-latest'
+            }
+        }
+
+        stage('Perform the build') {
+            steps {
+                sh 'make'
+            }
+        }
+
+        stage('Install the finished programme') {
+            steps {
+                sh 'sudo make install'
+            }
+        }
+    }
+}
