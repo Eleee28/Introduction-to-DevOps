@@ -1,6 +1,6 @@
 # Lab 1 - Bash Programming
 
-This lab consists on writting a number of simple scripts to help you build a basic understanding of how Bash can be used as a programming language.
+This lab consists on writing a number of simple scripts to help you build a basic understanding of how Bash can be used as a programming language.
 
 ## Exercise 1 - Hello World
 Implement a Bash script that prints hello world.

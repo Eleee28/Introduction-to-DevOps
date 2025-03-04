@@ -18,7 +18,7 @@ To log in for the first time, run the following command on the VM:
 ~~~bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ~~~
-Enter the password into the webpage and click *Continue*. On the next page, click *Install suggested plugins*. This will tahe a few minutes to run. When finished, you'll be brought to a page to create a permanent administrator account, with a username, password etc of yout choosing. After this, you'll come to the Jenkins main page (*Dashboard*).
+Enter the password into the webpage and click *Continue*. On the next page, click *Install suggested plugins*. This will take a few minutes to run. When finished, you'll be brought to a page to create a permanent administrator account, with a username, password etc of your choosing. After this, you'll come to the Jenkins main page (*Dashboard*).
 
 <figure>
   <img src="1-1.png" alt="Jenkins Dashboard"/>
@@ -72,8 +72,8 @@ Now, click *Save*. You should be brought to the Pipeline screen.
 On the menu on the left, you see the option *Build Now*. Click that to start the Pipeline. The build process should appear below this menu. Click on it and then click *Console Output* to watch the build process run.
 
 <figure>
-  <img src="2-4.png" alt="Build successfull"/>
-  <figcaption>Console Log showing successfull Build</figcaption>
+  <img src="2-4.png" alt="Build successful"/>
+  <figcaption>Console Log showing successful Build</figcaption>
 </figure>
 
 The build process is quite slow (git is a large piece of software, so building it could take 30 minutes or so, depending on your computer). Regardless of how long it takes, it should all be automated. After it has finished, you should be able to type:

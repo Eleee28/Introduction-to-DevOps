@@ -3,7 +3,7 @@
 The aim of this lab is to wite a Vagrantfile that will automatically set up a VM that will serve a web app. You will see that this DevOps-centric approach to provisioning and deploying a VM is significantly easier than doing it manually, as you would have done previously.
 
 ## Setting up Vagrant
-For this lab, we will be making use of [Debian](https://www.debian.org/), the Linux distribution that Ubuntu is derived from. We'll sidestep the complexity of the install process by getting Vagrant to install it for us. First, make sure you have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://developer.hashicorp.com/vagrant/install) intalled on you machine, and then you should be abe to get a working Debian Linux VM running on VirtualBox within a couple of minutes by running:
+For this lab, we will be making use of [Debian](https://www.debian.org/), the Linux distribution that Ubuntu is derived from. We'll sidestep the complexity of the install process by getting Vagrant to install it for us. First, make sure you have [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://developer.hashicorp.com/vagrant/install) installed on you machine, and then you should be abe to get a working Debian Linux VM running on VirtualBox within a couple of minutes by running:
 ~~~ bash
 mkdir debian_vm
 cd debian_vm
@@ -87,7 +87,7 @@ flask --app hello run --host=0.0.0.0
 
 &nbsp;
 
-You should be able to open another terminal/command prompt window, run ``vagrant ssh`` again to log into the VM again, and run ``curl -O http://localhost:5000`` to download the HTML file and prove that the app works. The aoutput should be stored in a file called *curl_response*.
+You should be able to open another terminal/command prompt window, run ``vagrant ssh`` again to log into the VM again, and run ``curl -O http://localhost:5000`` to download the HTML file and prove that the app works. The output should be stored in a file called *curl_response*.
 
 ## Automating this deployment
 
@@ -110,7 +110,7 @@ The Vagrantfile should:
 - Add port forwarding to the Vagrantfile. The Flask server listens on port 5000 of the guest. This is done using the **config.vm.network** command in the Vagrantfile.
 - The provisioning process should run automatically next time you run **vagrant up**.
 
-When this works, you should be able to access the wep app on your host machine. Assuming you forwarded to port 5000, you coul run **http://localhost:5000** in your browser and see the message from the app.
+When this works, you should be able to access the wep app on your host machine. Assuming you forwarded to port 5000, you could run **http://localhost:5000** in your browser and see the message from the app.
 
 ## Modifying the app
 Make a change to the app so that it serves two pages: one for the / route and another for a new **/about** route.

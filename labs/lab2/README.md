@@ -35,7 +35,7 @@ Modify the simple programme to do something else (e.g. display the numbers 1 to 
 Create and switch to a new branch called `new_greeting`. Change the string printed from saying hello world to say "Welcome!". Switch back to the `main` branch, and modify the string again to say "This is another string!". Now, merge the `new_greeting` branch into the main branch:
 `git merge new_greeting`
 
-This should cause a merge conflict. Resolve the merge confict, and then commit and push the merged branch to the remote repository.
+This should cause a merge conflict. Resolve the merge conflict, and then commit and push the merged branch to the remote repository.
 
 We will also try doing a fast-forward merge: create a new branch called `fast_forward_test`. Switch to this branch, and write a second program to compute the average of a set of numbers given to the user. Add, commit and push the changes in this branch. Now, use the git merge command to merge `fast_forward_test` into `main`.
 
