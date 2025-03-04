@@ -1,0 +1,21 @@
+# Workflow
+name: C Build Workflow
+
+on: [push, pull_request]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the git repo
+        uses: actions/checkout@v4
+      
+      - name: Build project
+        run: |
+          make
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-application
+          path: hello
