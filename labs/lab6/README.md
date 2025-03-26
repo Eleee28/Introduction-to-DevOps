@@ -34,9 +34,9 @@ docker run -p 8080:5000 --name my_flask_container my_flask_image
 
 If your Dockerfile was correct, you should be able to visit `localhost:8080` on your browser and see the Flask app running at this point.
 
-![container running](1-2.png)
+![container running](images/1-2.png)
 
-![screenshot web app browser](1-3.png)
+![screenshot web app browser](images/1-3.png)
 
 ## Inspecting an existing container
 

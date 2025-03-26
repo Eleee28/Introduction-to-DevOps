@@ -21,7 +21,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Enter the password into the webpage and click *Continue*. On the next page, click *Install suggested plugins*. This will take a few minutes to run. When finished, you'll be brought to a page to create a permanent administrator account, with a username, password etc of your choosing. After this, you'll come to the Jenkins main page (*Dashboard*).
 
 <figure>
-  <img src="1-1.png" alt="Jenkins Dashboard"/>
+  <img src="images/1-1.png" alt="Jenkins Dashboard"/>
   <figcaption>Jenkins Dashboard</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@ Now, click *Save*. You should be brought to the Pipeline screen.
 On the menu on the left, you see the option *Build Now*. Click that to start the Pipeline. The build process should appear below this menu. Click on it and then click *Console Output* to watch the build process run.
 
 <figure>
-  <img src="2-4.png" alt="Build successful"/>
+  <img src="images/2-4.png" alt="Build successful"/>
   <figcaption>Console Log showing successful Build</figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ The build process is quite slow (git is a large piece of software, so building i
 ~~~
 
 <figure>
-  <img src="3-1.png" alt="Periodic configuration"/>
+  <img src="images/3-1.png" alt="Periodic configuration"/>
   <figcaption>Periodic Build Configuration</figcaption>
 </figure>
 
@@ -93,13 +93,13 @@ H/10 * * * *
 ~~~
 
 <figure>
-  <img src="4-1.png" alt="Periodic configuration"/>
+  <img src="images/4-1.png" alt="Periodic configuration"/>
   <figcaption>Periodic Build Configuration</figcaption>
 </figure>
 
 This uses a [cron-like syntax](https://en.wikipedia.org/wiki/Cron) to tell Jenkins to re-run the task every 10 minutes later. Jenkins will automatically pull from the git repository in the future, rather than clone it again. It will then re-run make. Thanks to incremental builds, make will do nothing if no changes have been made since the last run, so most future runs will be very fast, and won't change the executable. Again, click *Save* to save your changes and verify that a new build is attempted 10 minutes later.
 
 <figure>
-  <img src="5-1.png" alt="Periodic configuration"/>
+  <img src="images/5-1.png" alt="Periodic configuration"/>
   <figcaption>Periodic Build Configuration</figcaption>
 </figure>

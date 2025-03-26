@@ -24,11 +24,11 @@ git clone repo_url
 
 Write a simple programme (e.g. a hello world programme) in a language of your choice. Add and commit this to the repo with a suitable commit message. Then, use `git push` to upload these changes to the remote repository. Verify that the code can be seen via the GitHub web interface, and take a screenshot of this, which will be needed later. 
 
-[screenshot GitHub UI](1-1.png)
+[screenshot GitHub UI](images/1-1.png)
 
 Modify the simple programme to do something else (e.g. display the numbers 1 to 10 using a loop). Add, commit and push the changes. Use `git log` to see the IDs of your commits, and `git diff` to find the difference between the two commits. Take a screenshot of the output from `git diff`.
 
-[screenshot git diff](2-1.png)
+[screenshot git diff](images/2-1.png)
 
 ## Branching and merging
 

@@ -74,14 +74,14 @@ flask --app hello run --host=0.0.0.0
 ~~~
 
 <figure>
-  <img src="1-1.png" alt="Flask running"/>
+  <img src="images/1-1.png" alt="Flask running"/>
   <figcaption>Flask running on the VM</figcaption>
 </figure>
 
 &nbsp;
 
 <figure>
-  <img src="1-2.png" alt="Flask receiving requests"/>
+  <img src="images/1-2.png" alt="Flask receiving requests"/>
   <figcaption>Flask receiving requests on the VM</figcaption>
 </figure>
 
@@ -118,6 +118,6 @@ For **/about**, it should display a message saying "This is a Flask web app runn
 Modify the / route to include a link to this page.
 
 <figure>
-  <img src="2-1.png" alt="Browser visual"/>
+  <img src="images/2-1.png" alt="Browser visual"/>
   <figcaption>Browser viewing the web page</figcaption>
 </figure>

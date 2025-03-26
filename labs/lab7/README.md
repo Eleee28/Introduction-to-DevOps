@@ -64,7 +64,7 @@ kubectl create -f flaskapp.yaml
 
 At this point, you should be able to run the command `kubectl get pods` to see the Pod running in the background.
 
-![screenshot](1-1.png)
+![screenshot](images/1-1.png)
 
 ## Accessing the Pod
 Remember that Kubernetes Pods can only network with each other by default. To allow our Pod to connect to the VM or host, we need to introduce a *Service*. The most useful type of service is a *Load Balancer*, which sets up a load balancer on the system (it is absolutely overkill for our simple Flask app but we'll use it anyway).
@@ -96,7 +96,7 @@ kubectl create -f service.yaml
 
 If you run `kubectl get svc`, you should now see the service has deployed. However, the `EXTERNAL-IP` column (which should show the IP address of the cluster for external access) should say that assigning the IP is still pending no matter how long you leave it running.
 
-![screenshot](1-2.png)
+![screenshot](images/1-2.png)
 
 To get around this, we have to ask Minikube to set up a *tunnel* (a small network that will be set up between the VM and the Kubernetes cluster running on *Minikube*) to allow us to access the cluster. The command for this is: 
 
@@ -104,11 +104,11 @@ To get around this, we have to ask Minikube to set up a *tunnel* (a small networ
 minikube tunnel
 ~~~
 
-![screenshot](1-3.png)
+![screenshot](images/1-3.png)
 
 This could take up to several minutes to work. It may also ask you for your password as it runs, since getting up tunnels generally needs root access. This will hang your terminal, but you should be able to access another terminal session to run `kubectl get svc` again. This time, you should see an IP address you can use to access the cluster. 
 
-![screenshot](1-4.png)
+![screenshot](images/1-4.png)
 
 
 You should now be able to access the Flask app running on the Pod. Use *wget* to download the web page:
@@ -120,7 +120,7 @@ You should now be able to access the Flask app running on the Pod. Use *wget* to
 wget IP address:5000
 ~~~
 
-![screenshot](1-5.png)
+![screenshot](images/1-5.png)
 
 If you are running *Minikube* locally, you should be able to type `IP address:5000` into your browser and see the page being served from inside the cluster.
 
@@ -129,6 +129,6 @@ However, if you are running *Minikube* in a VM, the cluster IP will not be acces
 > [!NOTE]
 > This is quite a complex setup: the HTTP request from your browser arrives in port 8080 of your host machine, is forwarded to port 5050 of the guest machine, then to the service running in the cluster, and finally to the container inside the pod.
 
-![screenshot](1-7.png)
+![screenshot](images/1-7.png)
 
-![screenshot](1-6.png)
+![screenshot](images/1-6.png)
